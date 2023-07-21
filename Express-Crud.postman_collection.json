@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "4bf8c020-d945-4bc2-8ef9-4b209536e426",
+		"name": "Express-Crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23038556"
+	},
+	"item": [
+		{
+			"name": "Get All User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "106"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6a-AGYKF4nT+lIhrLPGwBD2NYuy0VQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jul 2023 18:47:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"64baa6b9fbe4e5780414f393\",\n        \"Name\": \"Ayush\",\n        \"Email\": \"ak34232@gmail.com\",\n        \"MobNo\": 7922792498,\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "post testing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c-q6urdcO023JW4sP2wKJnZzw+fjk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jul 2023 18:48:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Post Request"
+				}
+			]
+		},
+		{
+			"name": "add new data through params",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/Ayush/qwer@gmail.com/9945678689",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"Ayush",
+						"qwer@gmail.com",
+						"9945678689"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/Ayush/qwer@gmail.com/9945678689",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Ayush",
+								"qwer@gmail.com",
+								"9945678689"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "101"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"65-5wDQqq8r6IEK6r2dFvmhegzT6nw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jul 2023 18:51:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Name\": \"Ayush\",\n    \"Email\": \"qwer@gmail.com\",\n    \"MobNo\": 9945678689,\n    \"_id\": \"64bad3cdba6f5ddd7d442e79\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Add through body-parser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Ayush\",\r\n    \"Email\": \"ayush@gmail.com\",\r\n    \"MobNo\": 8603204527\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/add",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Ayush\",\r\n    \"Email\": \"ayush@gmail.com\",\r\n    \"MobNo\": 8603204527\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6-6pJ1DoQctQ7RSHYXHh78H/jCH8Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jul 2023 18:54:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"done\""
+				}
+			]
+		},
+		{
+			"name": "Update a data through id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Amit\",\r\n    \"Email\": \"Amit@gmail.com\",\r\n    \"MobNo\": \"7782865144\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/64baa6b9fbe4e5780414f393",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"64baa6b9fbe4e5780414f393"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "100"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"64-ldcZiLqvfSHSqpcK5FuTb1qzXm4\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jul 2023 18:56:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"64baa6b9fbe4e5780414f393\",\n    \"Name\": \"Amit\",\n    \"Email\": \"Amit@gmail.com\",\n    \"MobNo\": 7782865144,\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:5000",
+			"type": "string"
+		}
+	]
+}
